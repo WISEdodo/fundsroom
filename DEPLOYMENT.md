@@ -31,7 +31,7 @@ Render makes deploying Node.js apps extremely simple by syncing directly with Gi
 Set up the service with the following details:
 - **Root Directory:** `backend`
 - **Environment:** `Node`
-- **Build Command:** `npm install && npm run build`
+- **Build Command:** `npm install --include=dev && npm run build`
 - **Start Command:** `npm start` (This will execute `node dist/app.js`)
 
 ### Step 3: Environment Variables
