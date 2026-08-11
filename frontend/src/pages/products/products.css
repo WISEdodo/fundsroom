@@ -1,0 +1,38 @@
+.stock-info {
+  display: flex;
+  align-items: center;
+}
+
+.text-danger {
+  color: var(--danger) !important;
+}
+
+.movement-log-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.movement-log-item:last-child {
+  border-bottom: none;
+}
+
+.movement-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.movement-qty {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.qty-in { color: var(--success); }
+.qty-out { color: var(--danger); }
+
+.movement-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+}

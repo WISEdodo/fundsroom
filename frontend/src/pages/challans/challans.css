@@ -1,0 +1,46 @@
+.text-success {
+  color: var(--success) !important;
+}
+.text-success:hover {
+  background-color: var(--success-light) !important;
+  color: var(--success-dark) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.challan-form-section {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.challan-form-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.item-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 100px 50px;
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--surface-2);
+  border-radius: var(--radius-md);
+}
+
+.item-row:last-child {
+  margin-bottom: 0;
+}
+
+.item-totals {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
