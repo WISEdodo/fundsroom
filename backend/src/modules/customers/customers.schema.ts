@@ -9,8 +9,8 @@ export const createCustomerSchema = z.object({
   customerType: z.enum(['retail', 'wholesale', 'distributor']),
   address: z.string().optional(),
   status: z.enum(['lead', 'active', 'inactive']).default('lead'),
-  followUpDate: z.string().datetime().optional().nullable(),
-  notes: z.string().optional(),
+  followUpDate: z.string().optional().nullable().or(z.literal('')),
+  notes: z.string().optional().nullable().or(z.literal('')),
 });
 
 export const updateCustomerSchema = createCustomerSchema.partial();

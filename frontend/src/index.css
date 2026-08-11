@@ -331,6 +331,13 @@ p { color: var(--text-secondary); }
   animation: fadeIn 0.2s ease-out;
 }
 
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+}
+
 .modal-header {
   padding: 1.25rem 1.5rem;
   border-bottom: 1px solid var(--border);

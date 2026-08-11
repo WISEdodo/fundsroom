@@ -18,6 +18,8 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({ customer, onClose
     customerType: customer?.customerType || 'retail',
     address: customer?.address || '',
     status: customer?.status || 'lead',
+    followUpDate: customer?.followUpDate ? new Date(customer.followUpDate).toISOString().split('T')[0] : '',
+    notes: customer?.notes || '',
   });
   const [loading, setLoading] = useState(false);
 
@@ -106,6 +108,18 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({ customer, onClose
             <div className="form-group">
               <label className="form-label">Address</label>
               <textarea name="address" className="form-textarea" rows={3} value={formData.address} onChange={handleChange}></textarea>
+            </div>
+
+            <div className="grid-2">
+              <div className="form-group">
+                <label className="form-label">Follow-up Date</label>
+                <input type="date" name="followUpDate" className="form-input" value={formData.followUpDate} onChange={handleChange} />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">General Notes</label>
+              <textarea name="notes" className="form-textarea" rows={2} value={formData.notes} onChange={handleChange} placeholder="General information about the customer..."></textarea>
             </div>
           </div>
           

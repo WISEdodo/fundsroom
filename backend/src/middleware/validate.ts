@@ -11,6 +11,7 @@ export const validate = (schema: ZodSchema) => {
         field: e.path.join('.'),
         message: e.message,
       }));
+      console.error('Validation failed:', errors);
       return next(createError('Validation failed', 422, errors));
     }
 

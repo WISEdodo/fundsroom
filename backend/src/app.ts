@@ -8,6 +8,7 @@ import authRoutes from './modules/auth/auth.routes';
 import customerRoutes from './modules/customers/customers.routes';
 import productRoutes from './modules/products/products.routes';
 import challanRoutes from './modules/challans/challans.routes';
+import dashboardRoutes from './modules/dashboard/dashboard.routes';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler';
 
 const app = express();
@@ -33,6 +34,7 @@ app.use('/auth', authRoutes);
 app.use('/customers', customerRoutes);
 app.use('/products', productRoutes);
 app.use('/challans', challanRoutes);
+app.use('/dashboard', dashboardRoutes);
 
 // Error handling
 app.use(notFoundHandler);
